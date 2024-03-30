@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Bruno+Ace&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Crimson+Text:wght@400;600&family=Merriweather:wght@300&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;1,200&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600&family=Playfair+Display&family=Roboto:wght@300;500&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
+        rel="stylesheet">
+    <!-- Шрифты -->
+    <link rel="stylesheet" href="styles/authorization.css">
+    <link rel="icon" href="img/fso.ico">
+    <title>Авторизация</title>
+</head>
+
+<body>
+    <div class="login-page">
+        <div class="header">
+            <img src="img/logo_groza (2).png" alt="" class="logo_groza">
+            <p class="text_groza">"Groza"</p>
+        </div>
+        <div class="form">
+            <h2>Авторизация</h2>
+            <form class="login-form" name="authorization">
+                <input type="text" name="login" placeholder="логин" id="login" />
+                <input type="password" name="password" placeholder="пароль" id="pass" />
+                <button onclick="return CheckLogin()">Вход</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/authorization.js"></script>
+</body>
+
+</html>
