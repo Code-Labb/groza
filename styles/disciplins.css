@@ -1,0 +1,711 @@
+@font-face {
+    font-family: Montesrat;
+    src: url(../fonts/Montserrat-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Montesrat1;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: Montesrat1;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(200deg, #89b9ed, #4a4e62, #25313e);
+}
+
+.header {
+    padding: 10px 0px 0px 20px;
+    border-bottom: 1px solid black;
+    margin-top: -20px;
+    margin-left: -8px;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(358deg, #89b9ed, #4a4e62, #25313e);
+    /* background: linear-gradient(178deg, #89b9ed,#4a4e62,#25313e); */
+}
+
+.logo_text {
+    padding-left: 20px;
+    padding-top: 2px;
+    font-weight: 300;
+    font-size: 22px;
+    color: #fff;
+}
+
+.content {
+    border-bottom: 1px solid black;
+    margin-left: -8px;
+    width: 100%;
+    display: flex;
+}
+
+.nav_left_menu {
+    /* padding-left: 20px;  */
+    /* padding-top: 20px; */
+    width: 265px;
+    height: 100%;
+    font-size: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.navigations_a {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-bottom: 1px solid black;
+    /* margin-bottom: 20px; */
+}
+
+.navigations_a:hover {
+    background-color: #ededed;
+    transition: 0.5s;
+
+    .a_menu {
+        color: black;
+        transition: 0.5s;
+    }
+}
+
+.a_menu {
+    font-size: 16px;
+    /* padding-left: 20px; */
+    text-decoration: none;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+
+
+
+.information {
+    padding-right: 20px;
+    padding-bottom: 20%;
+    padding-left: 20px;
+    border-left: 1px solid black;
+    width: 100%;
+    height: 100%;
+    background-color: #ededed;
+    font-size: 18px;
+}
+
+h1 {
+    color: #a95959;
+    /* border: 1px solid black; */
+    text-align: center;
+    margin-top: 15%;
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+h3 {
+    color: #1759a1;
+    text-align: center;
+}
+
+.text_catalog {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.text_catalog>.text_catalog_one>p,
+.text_catalog_two>p {
+    -webkit-box-shadow: 15px -10px 15px -5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 15px -10px 15px -5px rgba(0, 0, 0, 0.5);
+    box-shadow: 15px -10px 15px -5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid #1759a1;
+    border-radius: 10px;
+
+}
+
+.footer {
+    margin-left: -8px;
+    margin-top: -16px;
+    margin-bottom: -10px;
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(193deg, #89b9ed, #4a4e62, #25313e);
+}
+
+.footer_text {
+    font-weight: 400;
+    color: #fff;
+    padding-left: 20px;
+    padding-top: 25px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+/* Стили для подложки */
+
+.overlay {
+
+    /* Скрываем подложку  */
+    opacity: 0;
+    visibility: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 20;
+    transition: .3s all;
+}
+
+
+/* Стили для модальных окон */
+
+.modal {
+
+    /* Скрываем окна  */
+    opacity: 0;
+    visibility: hidden;
+
+
+    /*  Установаем ширину окна  */
+    width: 100%;
+    max-width: 500px;
+
+    /*  Центрируем и задаем z-index */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    /* Должен быть выше чем у подложки*/
+
+    /*  Побочные стили   */
+    box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+    text-align: center;
+    padding: 30px;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: 0.3s all;
+}
+
+
+/* Стили для активных классов подложки и окна */
+
+.modal.active,
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.active {
+    border: 2px solid #1759a1;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Стили для кнопки закрытия */
+
+.modal__cross {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    fill: #444;
+    cursor: pointer;
+}
+
+
+/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
+
+.js-open-modal {
+    text-decoration: none;
+    display: flex;
+}
+
+.modal_text {
+    padding-top: 20px;
+    width: 250px;
+    /* height: 43px; */
+    text-align: center;
+    box-shadow: 15px -10px 15px -5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid #1759a1;
+    border-radius: 10px;
+    /* /* text-decoration: none; */
+}
+
+.modal_info {
+    float: left;
+}
+
+/* Блок с темами */
+.lessons {
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.name_lessons {
+    margin-bottom: 40px;
+    margin-right: 20px;
+    width: 250px;
+    display: grid;
+    /* height: 43px; */
+    text-align: center;
+    box-shadow: 15px -10px 15px -5px rgba(0, 0, 0, 0.5);
+    /* cursor: pointer; */
+    padding: 10px;
+    border: 2px solid #1759a1;
+    border-radius: 10px;
+}
+
+hr {
+    width: 100%;
+    height: 0;
+}
+
+.text_tema {
+    color: #1759a1;
+    margin: 0;
+}
+
+.tetx_name {
+    text-align: left;
+}
+
+.data_lessons {
+    width: 90px;
+    height: 30px;
+    border: 2px solid #1759a1;
+    border-radius: 10px;
+    margin-top: auto;
+    margin-left: 65%;
+}
+
+.text_button {
+    font-family: 'Montesrat1';
+    margin: 5px;
+}
+
+#text_button {
+    text-decoration: none;
+    color: black;
+}
+
+#text_button:hover {
+    text-decoration: none;
+    background-color: #1759a1;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.data_lessons:hover {
+    background-color: #1759a1;
+    border: 2px solid #1759a1;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+/* Настройка документов для чтения */
+.doc {
+    width: 100%;
+    background-color: #ededed;
+    border-left: 1px solid black;
+}
+
+/* Настройка тестирования */
+.wrapper {
+
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.main {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.quiz-frame {
+    border: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.quiz__head {
+    /* color: white; */
+    font-size: 20pt;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+
+.head__content {
+    font-family: Montserrat;
+    font-size: 16pt;
+    padding: 15px;
+
+}
+
+.quiz__body {
+
+    margin: 10px;
+}
+
+.quiz__footer {
+    /* color: white; */
+    /* position: absolute; */
+    bottom: 0;
+    display: block;
+    width: 100%;
+}
+
+.footer__content {
+    font-size: 20px;
+    /* font-family:Montserrat; */
+    padding: 5px;
+    font-family: Montserrat;
+    padding-top: 40px;
+}
+
+.button {
+
+    border: 0;
+    border-radius: 10px;
+    background: #6477EB;
+    color: #fff;
+    padding: 10px 25px;
+    width: 70%;
+    font-size: 14pt;
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+
+.button_wrong {
+    background: #EB6465;
+
+}
+
+.button_correct {
+    background: #5EB97D;
+}
+
+.button_passive {
+    background: #B3B3B3;
+}
+
+#repeat {
+    border: 0;
+    border-radius: 10px;
+    background: #6477EB;
+    color: #fff;
+    padding: 10px 25px;
+    width: 70%;
+    font-size: 12pt;
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+/* Кнопка раскрытия нормативной базы */
+.dropbtn {
+    font-family: 'Montesrat1';
+    text-align: left;
+    background-color: #89b9ed00;
+    color: #FFF;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #ededed;
+    transition: 0.5s;
+    color: black;
+
+    
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    font-family: 'Montesrat1';
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid black;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-top: 1px solid black;
+    /* border-bottom: 1px solid black; */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #575757;
+    color: #FFF;
+    transition: 0.5s;
+    
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+/* Стили для модальных окон */
+
+.modal {
+
+    /* Скрываем окна  */
+    opacity: 0;
+    visibility: hidden;
+
+
+    /*  Установаем ширину окна  */
+    width: 100%;
+    max-width: 500px;
+
+    /*  Центрируем и задаем z-index */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    /* Должен быть выше чем у подложки*/
+
+    /*  Побочные стили   */
+    box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+    text-align: center;
+    padding: 30px;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: 0.3s all;
+}
+
+
+/* Стили для активных классов подложки и окна */
+
+.modal.active,
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.active {
+    height: 85%;
+    max-width: 85%;
+    border: 2px solid #1759a1;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Стили для кнопки закрытия */
+
+.modal__cross {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    fill: #444;
+    cursor: pointer;
+}
+
+
+/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
+
+.js-open-modal {
+    text-decoration: none;
+    display: flex;
+}
+
+.modal_text {
+    padding-top: 20px;
+    width: 250px;
+    /* height: 43px; */
+    text-align: center;
+    box-shadow: 15px -10px 15px -5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid #1759a1;
+    border-radius: 10px;
+    color: #444;
+    /* /* text-decoration: none; */
+}
+
+.modal_info {
+    float: left;
+}
+
+iframe {
+    width: 90%;
+    height: 90%;
+}
+@media (max-width: 1249px) {
+
+    .lessons {
+        margin-top: 30px;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .head__content {
+        font-family: Montserrat;
+        font-size: 12pt;
+        padding: 5px;
+    }
+
+    .button {
+        font-family: Montserrat;
+        font-size: 12pt;
+    }
+
+}
+
+/* Стили для тестирования по идентификации личности */
+.testing_ident_lichnosty {
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    
+}
+.a_menu_quiz {
+    font-size: 16px;
+    padding-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.quiz_info {
+    margin-left: 15%;
+}
+.other-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.img_quiz {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.restartButton {
+    display: none;
+    text-align: center;
+    border: 0;
+    border-radius: 10px;
+    background: #6477EB;
+    color: #fff;
+    padding: 10px 25px;
+    width: 70%;
+    font-size: 12pt;
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    
+}
+
+/* Стили для тестирования по словестному портрету */
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#options img {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    cursor: pointer;
+}
+#score {
+    margin-top: 20px;
+    font-size: 18px;
+}
+#restart {
+    display: none;
+    margin-top: 15%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#question-counter {
+    margin-top: 40px;
+}
+.correct {
+    border: 3px solid green;
+}
+.incorrect {
+    border: 3px solid red;
+}
+
+/* Настройка медицины */
+
+.img_plakat {
+    width: 100%;
+    border: 1px solid #25313e;
+}
+
+.med {
+    color: #EB6465;
+}
+
+/* Стили для видео по медицине */
+
+.video_m {
+    width: 250px;
+    object-fit: cover;
+}
