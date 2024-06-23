@@ -1,0 +1,386 @@
+@font-face {
+    font-family: Montesrat;
+    src: url(../fonts/Montserrat-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Montesrat1;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+
+
+body {
+    font-family: Montesrat1;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: #B5B8B1;
+}
+
+.header {
+    display: flex;
+    padding: 10px 0px 0px 0px;
+    border-bottom: 1px solid black;
+    margin-top: -20px;
+    margin-left: -8px;
+    width: 100%;
+    height: 90px;
+    background: black;
+    /* background: linear-gradient(178deg, #89b9ed,#4a4e62,#25313e); */
+}
+
+/* Настройка сайта Гроза */
+.logo_groza {
+    height: 55px;
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 55px;
+}
+
+.text_groza {
+    font-family: "Bruno Ace", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 30px;
+    padding-top: 0px;
+    color: #fff;
+    /* animation: thunderstorm 1.5s infinite; */
+}
+
+h4 {
+    font-size: 28px;
+    text-align: center;
+    font-family: "Sofia Sans Extra Condensed", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: weight; */
+    font-style: normal;
+}
+
+.container {
+    flex-wrap: wrap;
+    justify-content: center;
+    /* text-align: center; */
+    border-bottom: 1px solid black;
+    margin-left: -8px;
+    width: 100%;
+    display: flex;
+}
+
+.disciplins {
+    padding-bottom: 0%;
+    width: 100px;
+    padding-left: 0%;
+    padding-right: 5%;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.img_disciplins {
+    width: 40px;
+    border: 4px solid black;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Выделение цвета при наведении в контенте */
+.container>#ustav>a>img:hover {
+    background-color: #f3ce15;
+}
+
+.container>#sp>a>img:hover {
+    background-color: #19b459;
+}
+
+.container>#medical>a>img:hover {
+    background-color: #F80000;
+}
+
+.container>#classnost>a>img:hover {
+    background-color: #f60;
+}
+
+.container>#pdd>a>img:hover {
+    background-color: #065c6f;
+}
+
+.container>#examing>a>img:hover {
+    background-color: #848ccf;
+}
+
+.container>#iden_lichnosty>a>img:hover {
+    background-color: #a4c1be;
+}
+.container>#kinologi>a>img:hover {
+    background-color: #1E5945;
+}
+
+@keyframes thunderstorm {
+    0% { text-shadow: 0 0 5px white; }
+    25% { text-shadow: 0 0 10px white; }
+    50% { text-shadow: 0 0 15px white; }
+    75% { text-shadow: 0 0 10px white; }
+    100% { text-shadow: 0 0 5px white; }
+}
+
+
+.podval {
+    position: absolute;
+    /* bottom: 0; */
+    display: flex;
+    /* padding: 10px 0px 0px 0px; */
+    /* border-bottom: 1px solid black; */
+    /* margin-top: -20px; */
+    margin-left: -8px;
+    width: 100%;
+    height: 70px;
+    background: black;
+}
+
+.podval_ak {
+    margin-left: 20px;
+}
+
+.podval_pulya {
+    margin-left: 5%;
+    margin-bottom: 16px;
+}
+
+.podval_plamya {
+    margin-left: -10px;
+    /* padding-right: 0px; */
+    /* margin-right: -70px; */
+    margin-top: 30px;
+    height: 30px;
+    /* width: 30px; */
+}
+
+.podval_text {
+    line-height: 25px;
+    color: white;
+    margin-left: 20px;
+    font-family: "Comfortaa", sans-serif;
+
+}
+
+/* Конец настройки сайта гроза */
+.logo_text {
+    padding-left: 20px;
+    padding-top: 2px;
+    font-weight: 300;
+    font-size: 22px;
+    color: #fff;
+}
+
+.content {
+    justify-content: center;
+    /* text-align: center; */
+    border-bottom: 1px solid black;
+    margin-left: -8px;
+    width: 100%;
+    display: flex;
+}
+
+.nav_left_menu {
+    /* padding-left: 20px;  */
+    /* padding-top: 20px; */
+    width: 200px;
+    height: 100%;
+    font-size: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.navigations_a {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-bottom: 1px solid black;
+    /* margin-bottom: 20px; */
+}
+
+.navigations_a:hover {
+    background-color: #ededed;
+    transition: 0.5s;
+
+    .a_menu {
+        color: black;
+        transition: 0.5s;
+    }
+}
+
+.a_menu {
+    font-size: 16px;
+    /* padding-left: 20px; */
+    text-decoration: none;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+
+
+
+.information {
+    padding-right: 20px;
+    padding-bottom: 20%;
+    padding-left: 20px;
+    border-left: 1px solid black;
+    width: 100%;
+    height: 100%;
+    background-color: #ededed;
+    font-size: 18px;
+}
+
+h3 {
+    color: #1759a1;
+    text-align: center;
+}
+
+.text_catalog {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.text_catalog>.text_catalog_one>p,
+.text_catalog_two>p {
+    -webkit-box-shadow: 15px -10px 15px -5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 15px -10px 15px -5px rgba(0, 0, 0, 0.5);
+    box-shadow: 15px -10px 15px -5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid #1759a1;
+    border-radius: 10px;
+
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    margin-left: -8px;
+    margin-top: -16px;
+    margin-bottom: -10px;
+    height: 80px;
+    width: 100%;
+    background: black;
+}
+
+.footer_text {
+    font-weight: 400;
+    color: #fff;
+    padding-left: 20px;
+    padding-top: 25px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+/* Стили для подложки */
+
+.overlay {
+
+    /* Скрываем подложку  */
+    opacity: 0;
+    visibility: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 20;
+    transition: .3s all;
+}
+
+
+/* Стили для модальных окон */
+
+.modal {
+
+    /* Скрываем окна  */
+    opacity: 0;
+    visibility: hidden;
+
+
+    /*  Установаем ширину окна  */
+    width: 100%;
+    max-width: 500px;
+
+    /*  Центрируем и задаем z-index */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    /* Должен быть выше чем у подложки*/
+
+    /*  Побочные стили   */
+    box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+    text-align: center;
+    padding: 30px;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: 0.3s all;
+}
+
+
+/* Стили для активных классов подложки и окна */
+
+.modal.active,
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.active {
+    border: 2px solid #1759a1;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Стили для кнопки закрытия */
+
+.modal__cross {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    fill: #444;
+    cursor: pointer;
+}
+
+
+/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
+
+.js-open-modal {
+    text-decoration: none;
+    display: flex;
+}
+
+.modal_text {
+    padding-top: 20px;
+    width: 250px;
+    /* height: 43px; */
+    text-align: center;
+    box-shadow: 15px -10px 15px -5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid #1759a1;
+    border-radius: 10px;
+    color: #444;
+    /* /* text-decoration: none; */
+}
+
+.modal_info {
+    float: left;
+}
