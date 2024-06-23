@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Bruno+Ace&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Crimson+Text:wght@400;600&family=Merriweather:wght@300&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;1,200&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600&family=Playfair+Display&family=Roboto:wght@300;500&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/learning.css">
+    <title>Тестирование. Экзамен</title>
+    <link rel="icon" href="../img/fso.ico">
+</head>
+
+<body>
+    <section class="top-nav">
+        <div>
+            <p class="text_groza">"Groza"</p>
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu" id="menu">
+            <li>
+                <a href="../home_page/index.html">Главная</a>
+            </li>
+        </ul>
+    </section>
+    <div class="wrapper">
+        <main class="main">
+            <div class="quiz__head">
+                <div class="head__content" id="head"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ducimus odit accusamus, illum quas magni provident odio praesentium commodi sint, porro harum, minus cupiditate architecto culpa aut ex dolore officia.</div>
+            </div>
+            <div class="quiz__body">
+                <div class="buttons">
+                    <div class="buttons__content" id="buttons">
+                        <button class="button">Default button</button><br>
+                        <button class="button button_wrong">Wrong answer</button><br>
+                        <button class="button button_correct">Correct answer</button><br>
+                        <button class="button button_passive">Unclicked button</button><br>
+                    </div>
+                </div>
+
+                <div class="quiz__footer">
+                    <div class="footer__content" id="pages">  0 / 0</div>
+                </div>
+                <button id="repeat" onclick='window.location.reload(true)'  > Начать заново</button>
+            </div>
+        </main>
+    </div>
+    <script type="text/javascript" src="../js/examen.js"></script>
+    <div class="podval">
+        
+        <!-- <img src="../img/AK12 (1).png" alt="" class="podval_ak">
+        <img src="../img/plamya (1).png" alt="" class="podval_plamya">
+        <img src="../img/pulya.png" alt="" class="podval_pulya"> -->
+    </div>
+</body>
+
+</html>
